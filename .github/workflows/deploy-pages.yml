@@ -33,6 +33,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        - name: Show build output
+        run: |
+          echo "=== .output ==="
+          find .output -maxdepth 4 -type f | sort
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
