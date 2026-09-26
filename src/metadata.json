@@ -1,0 +1,22 @@
+{
+  "default": {
+    "title": "Ambulance klinické psychologie Brno",
+    "description": "Informace Ambulance klinické psychologie Brno."
+  },
+  "/": {
+    "title": "Ambulance klinické psychologie Brno",
+    "description": "Informace Ambulance klinické psychologie Brno."
+  },
+  "/tym": {
+    "title": "Náš tým | Ambulance klinické psychologie Brno",
+    "description": "Informace o týmu Ambulance klinické psychologie Brno."
+  },
+  "/sluzby": {
+    "title": "Služby | Ambulance klinické psychologie Brno",
+    "description": "Přehled služeb Ambulance klinické psychologie Brno."
+  },
+  "/kontakt": {
+    "title": "Kontakt | Ambulance klinické psychologie Brno",
+    "description": "Kontaktní informace Ambulance klinické psychologie Brno."
+  }
+}

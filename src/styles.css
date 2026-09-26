@@ -1,0 +1,274 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Clinic palette — warm ivory, muted sage, pastel blue, deep teal ink */
+  --clinic-ivory: 44 45% 96%;
+  --clinic-paper: 44 40% 99%;
+  --clinic-sage: 98 24% 86%;
+  --clinic-sage-soft: 98 18% 93%;
+  --clinic-sky: 205 52% 86%;
+  --clinic-sky-soft: 203 55% 94%;
+  --clinic-ink: 188 40% 16%;
+  --clinic-ink-soft: 187 16% 34%;
+  --clinic-muted: 190 12% 46%;
+  --clinic-line: 188 20% 70%;
+  --clinic-link: 188 44% 30%;
+
+  /* Semantic tokens used by the shadcn-style ui components */
+  --background: var(--clinic-ivory);
+  --foreground: var(--clinic-ink);
+  --card: var(--clinic-paper);
+  --card-foreground: var(--clinic-ink);
+  --popover: var(--clinic-paper);
+  --popover-foreground: var(--clinic-ink);
+  --primary: var(--clinic-ink);
+  --primary-foreground: 44 40% 99%;
+  --secondary: var(--clinic-sage-soft);
+  --secondary-foreground: var(--clinic-ink);
+  --muted: var(--clinic-sage-soft);
+  --muted-foreground: var(--clinic-muted);
+  --accent: var(--clinic-sage);
+  --accent-foreground: var(--clinic-ink);
+  --destructive: 8 60% 50%;
+  --destructive-foreground: 0 0% 98%;
+  --border: var(--clinic-line);
+  --input: var(--clinic-line);
+  --ring: var(--clinic-ink);
+  --chart-1: 188 44% 30%;
+  --chart-2: 98 30% 46%;
+  --chart-3: 205 45% 52%;
+  --chart-4: 40 55% 55%;
+  --chart-5: 188 22% 40%;
+  --radius: 0.75rem;
+  --sidebar: var(--clinic-paper);
+  --sidebar-foreground: var(--clinic-ink);
+  --sidebar-primary: var(--clinic-ink);
+  --sidebar-primary-foreground: 44 40% 99%;
+  --sidebar-accent: var(--clinic-sage-soft);
+  --sidebar-accent-foreground: var(--clinic-ink);
+  --sidebar-border: var(--clinic-line);
+  --sidebar-ring: var(--clinic-ink);
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  /* Clinic semantic aliases */
+  --color-clinic-ivory: hsl(var(--clinic-ivory));
+  --color-clinic-paper: hsl(var(--clinic-paper));
+  --color-clinic-sage: hsl(var(--clinic-sage));
+  --color-clinic-sage-soft: hsl(var(--clinic-sage-soft));
+  --color-clinic-sky: hsl(var(--clinic-sky));
+  --color-clinic-sky-soft: hsl(var(--clinic-sky-soft));
+  --color-clinic-ink: hsl(var(--clinic-ink));
+  --color-clinic-ink-soft: hsl(var(--clinic-ink-soft));
+  --color-clinic-muted: hsl(var(--clinic-muted));
+  --color-clinic-line: hsl(var(--clinic-line));
+  --color-clinic-link: hsl(var(--clinic-link));
+
+  /* Typography */
+  --font-serif:
+    'Cormorant Garamond', 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-sans:
+    'Public Sans', 'Avenir Next', 'Segoe UI', system-ui, -apple-system,
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(circle at 92% 12%, hsl(var(--clinic-sky) / 0.34), transparent 28rem),
+      radial-gradient(circle at 4% 72%, hsl(var(--clinic-sage) / 0.34), transparent 32rem);
+    background-attachment: fixed;
+    color: hsl(var(--foreground));
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  :focus-visible {
+    outline: 2px solid hsl(var(--clinic-ink));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background-color: hsl(var(--clinic-sky));
+    color: hsl(var(--clinic-ink));
+  }
+}
+
+/* Hide Vite badge and error messages */
+body vite-error-overlay {
+  display: none;
+}
+
+/* Reusable soft, organic decorative patterns */
+@layer components {
+  .clinic-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+  .clinic-script-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 500;
+    color: hsl(var(--clinic-ink));
+  }
+  .clinic-script-sub {
+    @apply text-clinic-muted;
+  }
+  .clinic-eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.18em] text-clinic-ink-soft;
+  }
+  .clinic-card {
+    background-color: hsl(var(--clinic-paper) / 0.9);
+    border: 1px solid hsl(var(--clinic-line));
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 28px hsl(var(--clinic-ink) / 0.05), 0 1px 2px hsl(var(--clinic-ink) / 0.04);
+  }
+  .clinic-soft-blob {
+    border-radius: 58% 42% 55% 45% / 50% 55% 45% 50%;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--clinic-sage) / 0.55),
+      hsl(var(--clinic-sky) / 0.5)
+    );
+  }
+  .clinic-footer {
+    background:
+      radial-gradient(circle at 88% 22%, hsl(var(--clinic-sky) / 0.72), transparent 20rem),
+      radial-gradient(circle at 8% 80%, hsl(var(--clinic-sage) / 0.8), transparent 22rem),
+      hsl(var(--clinic-sage-soft));
+  }
+  .clinic-footer .text-clinic-muted {
+    color: hsl(var(--clinic-ink-soft));
+  }
+  .home-hero {
+    min-height: calc(100svh - 9rem);
+  }
+  .home-hero-clinician {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+}
+
+@keyframes home-hero-image-settle {
+  from {
+    transform: scale(1.045);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes home-hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-insurance-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .home-hero-image {
+    animation: home-hero-image-settle 18s ease-out both;
+  }
+  .home-hero-title {
+    animation: home-hero-reveal 800ms cubic-bezier(0.22, 1, 0.36, 1) 100ms both;
+  }
+  .home-hero-clinician {
+    animation: home-hero-reveal 800ms cubic-bezier(0.22, 1, 0.36, 1) 290ms both;
+  }
+  .home-insurance-item {
+    animation: home-insurance-reveal 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  /* Mobile: keep the hero portrait anchored left so faces stay visible;
+     from sm up the default center crop applies. */
+  @media (max-width: 639px) {
+    .home-hero-image {
+      object-position: left center;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
