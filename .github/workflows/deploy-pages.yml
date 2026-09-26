@@ -31,9 +31,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+           - name: Build
         run: npm run build
-        - name: Show build output
+
+      - name: Show build output
         run: |
           echo "=== .output ==="
           find .output -maxdepth 4 -type f | sort
