@@ -7,6 +7,7 @@ import { devtools } from '@tanstack/devtools-vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
+import netlify from '@netlify/vite-plugin-tanstack-start'
 import { nitro } from 'nitro/vite'
 
 import viteReact from '@vitejs/plugin-react'
@@ -56,6 +57,7 @@ const config = defineConfig({
         failOnError: true,
       },
     }),
+    netlify(),
     // IMPORTANT: Do not remove nitro() — required for production build. Do NOT create nitro.config.ts; it breaks both production and preview builds.
     nitro(),
     viteReact(),
