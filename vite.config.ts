@@ -59,7 +59,7 @@ const config = defineConfig({
     }),
     netlify(),
     // IMPORTANT: Do not remove nitro() — required for production build. Do NOT create nitro.config.ts; it breaks both production and preview builds.
-    nitro(),
+    !process.env.NETLIFY && nitro(),
     viteReact(),
   ],
 })
