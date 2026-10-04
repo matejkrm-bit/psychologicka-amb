@@ -130,7 +130,7 @@ export const teamMembers: TeamMember[] = [
   {
     slug: 'clen-4',
     name: 'Mgr. Jan Moos',
-    role: 'Psycholog v psychoterapeutickém výcviku SUR',
+    role: 'Psycholog a psychoterapeut ve výcviku SUR',
     introduction:
       'Psychoterapie dospělých osob',
     education: [
