@@ -69,7 +69,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     slug: 'clen-2',
-    name: 'Mgr. Barbora Šenovská',
+    name: 'Mgr. Barbora Kušnírová',
     role: 'Psycholožka v předatestační přípravě a psychoterapeutka ve výcviku PCA',
     introduction:
       'Diagnostika dospělých a psychoterapie dětí, dospívajících i dospělých',

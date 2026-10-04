@@ -44,7 +44,7 @@ function SluzbyPage() {
                     params={{ clen: 'clen-2' }}
                     className="text-clinic-link underline-offset-4 transition-colors hover:underline"
                   >
-                    Mgr. Barbora Šenovská
+                    Mgr. Barbora Kušnírová
                   </Link>
                   .
                 </dd>
