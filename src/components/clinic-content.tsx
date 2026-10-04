@@ -153,7 +153,8 @@ export const teamMembers: TeamMember[] = [
   {
     slug: 'clen-5',
     name: 'Mgr. Jana Ondráčková',
-    role: 'Psycholožka v předatestační přípravě a psychoterapeutka ve logoterapeutickém výcviku',
+    role: 'Psycholožka v předatestační přípravě a psychoterapeutka v logoterapeutickém výcviku',
+    phone: '799 555 226',
   },
 ]
 
